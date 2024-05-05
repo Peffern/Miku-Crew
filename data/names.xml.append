@@ -1,0 +1,70 @@
+<FTL>
+	<mod:findLike type="nameList">
+		<mod:findComposite>
+			<mod:par op="OR">
+				<mod:findLike type="name">
+					<mod:selector>Notch</mod:selector>
+				</mod:findLike>
+				<mod:findLike type="name">
+					<mod:selector>ノッチ</mod:selector>
+				</mod:findLike>
+				<mod:findLike type="name">
+					<mod:selector>Нотч</mod:selector>
+				</mod:findLike>
+				<mod:findLike type="name">
+					<mod:selector>那奇</mod:selector>
+				</mod:findLike>
+			</mod:par>
+			<mod:removeTag />
+		</mod:findComposite>
+	</mod:findLike>
+	<mod:findWithChildLike type="nameList" child-type="name">
+		<mod:selector>Kara</mod:selector>
+		<mod:setAttributes miku-aux="true" />
+	</mod:findWithChildLike>
+	<mod:findWithChildLike type="nameList" child-type="name">
+		<mod:selector>Lexie</mod:selector>
+		<mod:removeAttributes miku-aux="" />
+	</mod:findWithChildLike>
+	<mod:findLike type="nameList">
+		<mod:selector sex="female" />
+	    <mod-append:name short="Miku">Hatsune Miku</mod-append:name>
+	</mod:findLike>
+	<mod:findLike type="nameList">
+		<mod:selector sex="female" miku-aux="true" />
+		<mod:findLike type="name">
+			<mod:selector short="Miku" />
+			<mod:removeTag />
+		</mod:findLike>
+		<mod:removeAttributes miku-aux="" />
+	</mod:findLike>
+	<mod:findComposite>
+		<mod:par op="OR">
+			<mod:findLike type="nameList">
+				<mod:selector language="ja" />
+			</mod:findLike>
+			<mod:findLike type="nameList">
+				<mod:selector language="ru" />
+			</mod:findLike>
+			<mod:findLike type="nameList">
+				<mod:selector language="zh-Hans" />
+			</mod:findLike>
+		</mod:par>
+		<mod:findLike type="name">
+			<mod:selector short="Miku" />
+			<mod:removeTag />
+		</mod:findLike>
+	</mod:findComposite>
+	<mod:findLike type="nameList">
+		<mod:selector sex="female" language="ja" />
+		<mod-append:name short="ミク">初音ミク</mod-append:name>
+	</mod:findLike>
+	<mod:findLike type="nameList">
+		<mod:selector sex="female" language="ru" />
+		<mod-append:name short="Мику">Мику Хацунэ</mod-append:name>
+	</mod:findLike>
+	<mod:findLike type="nameList">
+		<mod:selector sex="female" language="zh-Hans" />
+		<mod-append:name short="初音">初音未来</mod-append:name>
+	</mod:findLike>
+</FTL>
